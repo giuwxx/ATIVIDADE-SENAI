@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main(){
+	
+	setlocale(LC_ALL, "portuguese");
+	
+	int num, cont = 0;
+	
+	printf("Digite um número inteiro: ");
+	scanf("%d", &num);
+	
+	for(int i = 1; i <= num; i++){
+		if(num % i == 0){
+			cont++;
+		}
+	}
+	
+	printf("Quantidade de divisíveis: %d\n", cont);
+	cont == 2 ? printf("Número é primo\n"): printf("Número não é primo\n");
+}
